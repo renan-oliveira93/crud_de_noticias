@@ -4,12 +4,16 @@ import axios from 'axios';
 
 export default function Home() {
 
+  /*armazenamento de dados*/
+
   const [noticias, setNoticias] = useState([]);
   const [id, setId] = useState('');
   const [date, setDate] = useState('');
   const [titulo, setTitulo] = useState('');
   const [conteudo, setConteudo] = useState('');
   const [isFormOpen, setIsForOpen] = useState(false);
+
+  /*manipulação das variaveis*/
 
   const handleChangeTitulo = (text) => {
     setTitulo(text);
@@ -20,6 +24,8 @@ export default function Home() {
     setConteudo(text);
     console.log(conteudo)
   }
+
+  /*manipulação das ações*/
 
   const handleSubmitCreate = async (e) => {
     e.preventDefault();
@@ -75,6 +81,8 @@ export default function Home() {
   const toggleFormState = () => {
     setIsForOpen(!isFormOpen)
   }
+
+  /*Busca no banco de dados*/
 
   useEffect(() => {
     axios.get('../api/noticias')
