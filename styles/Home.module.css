@@ -88,4 +88,27 @@
 
 .botao_do_card:hover{
   background-color: #289ac0;
+} 
+
+@media screen and (max-width:600px) {
+ .card{
+   width: 90vw;
+ }
+
+ .container{
+   margin: 0;
+ }
+
+ .container h1{
+   margin: 1rem;
+ }
+
+ .container button{
+  margin: 1rem;
+}
+
+.campo_adicionar input{
+  width: 17rem;
+}
+
 }
